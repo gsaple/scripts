@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# this script is made by Luke Smith, can be found at
+# https://github.com/LukeSmithxyz/st
+# the bottom option part is slightly modified.
+
+urlregex="(((http|https|gopher|gemini|ftp|ftps|git)://|www\\.)[a-zA-Z0-9.]*[:;a-zA-Z0-9./+@$&%?$\#=_~-]*)|((magnet:\\?xt=urn:btih:)[a-zA-Z0-9]*)"
+
+urls="$(sed 's/.*│//g' | tr -d '\n' | # First remove linebreaks and mutt sidebars:
+	grep -aEo "$urlregex" | # grep only urls as defined above.
+	uniq | # Ignore neighboring duplicates.
+	sed "s/\(\.\|,\|;\|\!\\|\?\)$//;
+	s/^www./http:\/\/www\./")" # xdg-open will not detect url without http
+
+[ -z "$urls" ] && exit 1
+chosen="$(echo "$urls" | dmenu -i -p 'which url?' -l 10)"
+[ -z "$chosen" ] && exit 1
+select="$(echo -e "copy\nopen" | dmenu -i -p 'copy or open?' -l 2)"
+[ -z "$select" ] && exit 1
+[ $select == "open" ] && setsid xdg-open "$chosen" >/dev/null 2>&1 &
+[ $select == "copy" ] && echo "$chosen" | tr -d '\n' | xclip -selection clipboard
