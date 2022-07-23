@@ -9,6 +9,6 @@ timeBar_id=$(pgrep time_bar.sh)
 pkill full_bar.sh
 pkill time_bar.sh
 
-[ ! -z "$fullBar_id" ] && time_bar.sh && exit 0
-[ ! -z "$timeBar_id" ] && full_bar.sh && exit 0
+[[ ! -z $fullBar_id ]] && time_bar.sh && exit 0
+[[ ! -z $timeBar_id ]] && full_bar.sh && exit 0
 time_bar.sh
