@@ -2,6 +2,7 @@
 
 # some of following functions are modified from scripts found on
 # https://github.com/joestandring/dwm-bar
+# https://github.com/thytom/dwmbar
 
 #SEP=" ⏽ "
 SEP=" ^c#04cc0b^^d^ "
@@ -86,8 +87,7 @@ dwm_resources () {
 }
 
 dwm_weather () {
-    LOCATION=Melbourne
-    DATA=$(curl -s wttr.in/$LOCATION?format=3 | awk '{print $2, $3}')
+    DATA=$(curl -s wttr.in/?format=3 | awk '{print $3, $4}')
     printf "%s%s" "$DATA" "$SEP"
 }
 
