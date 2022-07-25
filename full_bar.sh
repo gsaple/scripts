@@ -4,6 +4,9 @@
 # https://github.com/joestandring/dwm-bar
 # https://github.com/thytom/dwmbar
 
+LOC=$(readlink -f "$0")
+DIR=$(dirname "$LOC")
+
 #SEP=" ⏽ "
 SEP=" ^c#04cc0b^^d^ "
 
@@ -56,8 +59,7 @@ dwm_internet () {
     CON_TYPE=$(nmcli -t -f TYPE connection show --active)
     CON_NAME=$(nmcli -t -f NAME connection show --active)
     if [[ $CON_TYPE =~ .*wireless ]]; then
-        read -ra ADDR <<< "$(nmcli device wifi list | grep $CON_NAME)"
-	strength=${ADDR[-3]}
+        strength=$(cat $DIR/status_data/internet)
 	if [[ $strength -le 0 ]]; then
 	    printf "^c#a89984^睊 ^d^%s%%" "$strength"
 	elif [[ $strength -gt 0 ]] && [[ $strength -lt 70 ]]; then
@@ -87,7 +89,7 @@ dwm_resources () {
 }
 
 dwm_weather () {
-    DATA=$(curl -s wttr.in/?format=3 | awk '{print $3, $4}')
+    DATA=$(cat $DIR/status_data/weather)
     printf "%s%s" "$DATA" "$SEP"
 }
 
