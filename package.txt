@@ -43,3 +43,4 @@ google-noto-emoji-color-fonts
 tree
 fish
 exa
+fzf

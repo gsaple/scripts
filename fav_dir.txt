@@ -1,0 +1,7 @@
+built-software/st
+built-software/dwm
+built-software/dmenu
+mybin
+wallpapers
+Downloads
+.config
