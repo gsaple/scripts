@@ -44,3 +44,18 @@ tree
 fish
 exa
 fzf
+zathura
+zathura-pdf-poppler
+zathura-ps
+zathura-djvu
+ImageMagick
+https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E % fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+mpv
+atool
+moreutils
+lynx
+bat
+mediainfo
+ffmpegthumbnailer
+poppler-utils
+odt2txt
