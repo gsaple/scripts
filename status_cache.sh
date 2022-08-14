@@ -8,7 +8,7 @@ internet=$DIR/status_data/internet
 # monitor weather every hour
 while true
 do
-    curl -s wttr.in/?format=3 | awk '{print $3, $4}' > $weather
+    curl wttr.in/?format="+%t\n" | awk '{$1=$1};1' > $weather
     sleep 1h
 done &
 
