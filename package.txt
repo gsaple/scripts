@@ -59,3 +59,6 @@ mediainfo
 ffmpegthumbnailer
 poppler-utils
 odt2txt
+fortune-mod
+cowsay
+figlet

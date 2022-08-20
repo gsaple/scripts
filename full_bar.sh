@@ -97,7 +97,7 @@ dwm_resources () {
     STOUSED=$(echo $df_output | awk '{print $3}')
     STOTOT=$(echo $df_output | awk '{print $2}')
     printf " %s/%s%s" "$MEMUSED" "$MEMTOT" "$SEP"
-    printf " %s/%s%s" "$STOUSED" "$STOTOT" "$SEP"
+    printf " %s/%s%s" "$STOUSED" "$STOTOT" "$SEP"
 }
 
 dwm_weather () {
