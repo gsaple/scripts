@@ -62,3 +62,8 @@ odt2txt
 fortune-mod
 cowsay
 figlet
+cups
+simple-scan
+toilet
+maim
+xdotool
