@@ -67,3 +67,4 @@ simple-scan
 toilet
 maim
 xdotool
+lolcat

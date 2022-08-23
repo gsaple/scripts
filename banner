@@ -1,0 +1,8 @@
+#!/bin/sh
+ 
+# fonts: https://github.com/xero/figlet-fonts
+IFS=$'\n'
+figlet -f $HOME/mybin/3d.flf -w 150 $@ | lolcat -b -r
+
+# to comment everything out by inserting a comment char e.g. "#"
+#figlet -f 3d.flf -w 150 $@ | awk '{print "# " $0}' 
