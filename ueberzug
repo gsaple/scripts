@@ -1,5 +1,4 @@
-#!/usr/bin/python
-# This script is copied from archlinux
+#!/usr/bin/python3
 # EASY-INSTALL-ENTRY-SCRIPT: 'ueberzug==18.1.9','console_scripts','ueberzug'
 import re
 import sys
