@@ -68,3 +68,5 @@ toilet
 maim
 xdotool
 lolcat
+asciiquarium
+ascii
