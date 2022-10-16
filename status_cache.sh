@@ -4,11 +4,12 @@ LOC=$(readlink -f "$0")
 DIR=$(dirname "$LOC")
 weather=$DIR/status_data/weather
 internet=$DIR/status_data/internet
+city=Melbourne
 
 # monitor weather every hour
 while true
 do
-    curl wttr.in/?format="+%t\n" | awk '{$1=$1};1' > $weather
+    curl wttr.in/$city?format=3 > $weather
     sleep 1h
 done &
 

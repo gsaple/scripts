@@ -1,7 +1,10 @@
 built-software/st
 built-software/dwm
 built-software/dmenu
+built-software/donut
+built-software/cmatrix
 mybin
 wallpapers
 Downloads
 .config
+dwm-vanilla

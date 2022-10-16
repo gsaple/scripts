@@ -101,7 +101,7 @@ dwm_resources () {
 }
 
 dwm_weather () {
-    DATA=$(cat $DIR/status_data/weather)
+    DATA=$(cat $DIR/status_data/weather | awk '{print $3}')
     printf "  %s%s" "$DATA" "$SEP"
 }
 

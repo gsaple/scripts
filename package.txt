@@ -70,3 +70,5 @@ xdotool
 lolcat
 asciiquarium
 ascii
+obs-studio
+simplescreenrecorder
