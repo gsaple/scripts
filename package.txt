@@ -72,3 +72,6 @@ asciiquarium
 ascii
 obs-studio
 simplescreenrecorder
+pass
+lua
+akmod-wl

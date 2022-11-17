@@ -7,4 +7,6 @@ mybin
 wallpapers
 Downloads
 .config
+.config/nvim/lua
 dwm-vanilla
+.password-store
