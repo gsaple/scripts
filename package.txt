@@ -75,3 +75,6 @@ simplescreenrecorder
 pass
 lua
 akmod-wl
+ripgrep
+fd-find
+texlive-scheme-full
