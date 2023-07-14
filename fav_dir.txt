@@ -4,11 +4,10 @@ built-software/dmenu
 built-software/donut
 built-software/cmatrix
 fullstackopen
-mybin
+.local/bin
 wallpapers
 Downloads
 .config
 .config/nvim
-dwm-vanilla
 .password-store
 CV

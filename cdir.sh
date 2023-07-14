@@ -1,2 +1,2 @@
 #!/bin/sh
-cd $HOME/$(cat $HOME/mybin/fav_dir.txt | fzf)
+cd $HOME/$(cat $HOME/.local/bin/fav_dir.txt | fzf)
