@@ -106,7 +106,7 @@ dwm_weather () {
 }
 
 # only one-time peek maybe
-one_time=$(dwm_weather)$(dwm_internet)$(dwm_resources)
+one_time=$(dwm_resources)
 
 while true
 do
