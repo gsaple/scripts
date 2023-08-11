@@ -1,0 +1,6 @@
+#!/bin/bash
+input_file="$1"
+docx2txt.sh "$input_file" > /dev/null 2>&1
+output_file="${input_file%.docx}.txt"
+cat "$output_file" | head -n "$(($2-2))"
+rm "$output_file"
