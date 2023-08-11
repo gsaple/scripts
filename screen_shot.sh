@@ -1,5 +1,5 @@
 #!/bin/sh
-name="$HOME/screen_shot/$(date +%s_%h%d_%H:%M:%S).png"
+name="$HOME/Pictures/screenshots/$(date +%s_%h%d_%H:%M:%S).png"
 select=$(echo -e "full\nselect\nactive" | dmenu -l 3)
 case $select in
     "full")
